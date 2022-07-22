@@ -3,23 +3,16 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Myqrencode < Formula
   desc ""
-  homepage ""
-  url "https://github.com/harutiro/myqrencode/archive/refs/tags/0.0.3.tar.gz"
-  sha256 "302fb8ba9c31343618ac41ff194f06222492e911f6cc946e45ff521ea241c3b2"
+  homepage "https://www.harutiro.net"
+  url "https://github.com/harutiro/myqrencode/archive/refs/tags/0.0.4.tar.gz"
+  sha256 "d5b8ed927e271366b2298b7a8151990799a02df6b2dad25fd769b24d55511ab7"
   license ""
 
   # depends_on "cmake" => :build
 
   def install
-    # ENV.deparallelize # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
-    system "./configure", "--disable-debug",
-    "--disable-dependency-tracking",
-    "--disable-silent-rules",
-    "--prefix=#{prefix}"
-    # system "cmake", ".", \*std\_cmake\_args
-    system "make" # if this fails, try separate make/make install steps
-    bin.install "myqrencode"
+    system "make"
+    bin.install "chikubeam"
   end
 
   test do
