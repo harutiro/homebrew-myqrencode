@@ -4,8 +4,8 @@
 class Myqrencode < Formula
   desc ""
   homepage ""
-  url "https://github.com/harutiro/myqrencode/archive/refs/tags/0.0.1.tar.gz"
-  sha256 "36349dd02d91ad7a3e0e7d5bd57ad43d1a63713348a9e05b37a70aa54b7c0a4d"
+  url "https://github.com/harutiro/myqrencode/archive/refs/tags/0.0.2.tar.gz"
+  sha256 "29758a6fc5beb2ef2a58c14a8f7e30b2e1cc38d57b1f1de6af184c01f135a595"
   license ""
 
   # depends_on "cmake" => :build
