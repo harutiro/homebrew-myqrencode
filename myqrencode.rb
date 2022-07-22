@@ -11,11 +11,14 @@ class Myqrencode < Formula
   # depends_on "cmake" => :build
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
+    # ENV.deparallelize # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
-    # https://rubydoc.brew.sh/Formula.html#std_configure_args-instance_method
-    system "./configure", *std_configure_args, "--disable-silent-rules"
-    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "./configure", "--disable-debug",
+      "--disable-dependency-tracking",
+      "--disable-silent-rules",
+      "--prefix=#{prefix}"
+    # system "cmake", ".", \*std\_cmake\_args
+    system "make", "install" # if this fails, try separate make/make install steps
   end
 
   test do
