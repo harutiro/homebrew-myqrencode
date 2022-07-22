@@ -4,8 +4,8 @@
 class Myqrencode < Formula
   desc ""
   homepage ""
-  url "https://github.com/harutiro/myqrencode/archive/refs/tags/0.0.2.tar.gz"
-  sha256 "29758a6fc5beb2ef2a58c14a8f7e30b2e1cc38d57b1f1de6af184c01f135a595"
+  url "https://github.com/harutiro/myqrencode/archive/refs/tags/0.0.3.tar.gz"
+  sha256 "302fb8ba9c31343618ac41ff194f06222492e911f6cc946e45ff521ea241c3b2"
   license ""
 
   # depends_on "cmake" => :build
@@ -14,9 +14,9 @@ class Myqrencode < Formula
     # ENV.deparallelize # if your formula fails when building in parallel
     # Remove unrecognized options if warned by configure
     system "./configure", "--disable-debug",
-      "--disable-dependency-tracking",
-      "--disable-silent-rules",
-      "--prefix=#{prefix}"
+    "--disable-dependency-tracking",
+    "--disable-silent-rules",
+    "--prefix=#{prefix}"
     # system "cmake", ".", \*std\_cmake\_args
     system "make", "install" # if this fails, try separate make/make install steps
   end
