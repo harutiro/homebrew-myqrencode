@@ -18,7 +18,7 @@ class Myqrencode < Formula
     "--disable-silent-rules",
     "--prefix=#{prefix}"
     # system "cmake", ".", \*std\_cmake\_args
-    system "make", "install" # if this fails, try separate make/make install steps
+    system "make install" # if this fails, try separate make/make install steps
   end
 
   test do
