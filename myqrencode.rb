@@ -12,6 +12,6 @@ class Myqrencode < Formula
 
   def install
     system "make"
-    bin.install "chikubeam"
+    bin.install "myqrencode"
   end
 end
